@@ -1,5 +1,6 @@
 import MyBaseModel from 'src/models/helpers/MyBaseModel';
 import VueCookies from 'vue-cookies';
+import Product from "src/models/orm-api/Product";
 
 export default class User extends MyBaseModel {
   static entity = 'user';
@@ -70,6 +71,8 @@ export default class User extends MyBaseModel {
       // 'remember_token': this.attr('').nullable(),
       'created_at': this.attr('').nullable(),
       'updated_at': this.attr('').nullable(),
+      'products': this.hasMany(Product, 'buyer_id'),
+      'productsSellerId': this.hasMany(Product, 'seller_id')
     };
   }
 

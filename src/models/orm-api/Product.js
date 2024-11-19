@@ -1,6 +1,6 @@
 import MyBaseModel from 'src/models/helpers/MyBaseModel';
 import Brand from 'src/models/orm-api/Brand';
-import User from 'src/models/orm-api/User';
+import User from 'src/models/User';
 import Category from 'src/models/orm-api/Category';
 import Gender from 'src/models/orm-api/Gender';
 
@@ -8,7 +8,7 @@ export default class Product extends MyBaseModel {
     static entity = 'product';
     static entityUrl = '/api/products';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'Product';
     static openRecord(pVal, item, router){
       router.push({
@@ -34,8 +34,8 @@ export default class Product extends MyBaseModel {
         editable: (item) => true,
         creatable: () => true,
     };
-    
-    
+
+
     static hooks = {
         createComplete: (response) => {
         },
@@ -59,7 +59,7 @@ export default class Product extends MyBaseModel {
 
     static fields() {
         return {
-            'id': this.attr(''),
+            'id': this.attr('').nullable(),
             'name': this.attr(''),
             'description': this.attr('').nullable(),
             'price': this.attr(''),

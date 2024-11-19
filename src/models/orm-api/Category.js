@@ -5,7 +5,7 @@ export default class Category extends MyBaseModel {
     static entity = 'category';
     static entityUrl = '/api/categories';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'Category';
     static openRecord(pVal, item, router){
       router.push({
@@ -18,7 +18,7 @@ export default class Category extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -27,8 +27,8 @@ export default class Category extends MyBaseModel {
         editable: (item) => true,
         creatable: () => true,
     };
-    
-    
+
+
     static hooks = {
         createComplete: (response) => {
         },
@@ -43,7 +43,7 @@ export default class Category extends MyBaseModel {
 
     static fields() {
         return {
-            'id': this.attr(''),
+            'id': this.attr('').nullable(),
             'name': this.attr(''),
             'created_at': this.attr('').nullable(),
             'updated_at': this.attr('').nullable(),

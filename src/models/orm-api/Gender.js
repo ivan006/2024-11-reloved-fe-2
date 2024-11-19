@@ -5,7 +5,7 @@ export default class Gender extends MyBaseModel {
     static entity = 'gender';
     static entityUrl = '/api/genders';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'Gender';
     static openRecord(pVal, item, router){
       router.push({
@@ -43,7 +43,7 @@ export default class Gender extends MyBaseModel {
 
     static fields() {
         return {
-            'id': this.attr(''),
+            'id': this.attr('').nullable(),
             'name': this.attr(''),
             'created_at': this.attr('').nullable(),
             'updated_at': this.attr('').nullable(),

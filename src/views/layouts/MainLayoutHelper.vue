@@ -146,7 +146,7 @@ const checkScreenWidth = () => {
 
 
 const leftDrawerOpen = ref(false);
-const siteTitle = ref('Lorum Ipsum');
+const siteTitle = ref('Reloved');
 
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;

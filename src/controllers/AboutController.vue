@@ -7,10 +7,10 @@
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
 
-        Lorum Ipsum
+        This site is in progress.
 
         <div class="q-mt-sm">
-          © Your App
+          © Reloved
         </div>
       </div>
     </div>

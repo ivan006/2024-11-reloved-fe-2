@@ -3,13 +3,13 @@ import Product from 'src/models/orm-api/Product';
 
 export default class Gender extends MyBaseModel {
     static entity = 'gender';
-    static entityUrl = '/api/gender-s';
+    static entityUrl = '/api/genders';
     static primaryKey = 'id';
     static titleKey = 'id';
     static entityHumanName = 'Gender';
     static openRecord(pVal, item, router){
       router.push({
-        name: '/lists/gender-s/:rId/:rName',
+        name: '/lists/genders/:rId/:rName',
         params: {
           rId: pVal,
           rName: pVal,
@@ -18,7 +18,7 @@ export default class Gender extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -27,8 +27,8 @@ export default class Gender extends MyBaseModel {
         editable: (item) => true,
         creatable: () => true,
     };
-    
-    
+
+
     static hooks = {
         createComplete: (response) => {
         },

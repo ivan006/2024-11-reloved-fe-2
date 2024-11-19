@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import genderRead from 'src/views/lists/gender-s/GenderRead.vue'
+import genderRead from 'src/views/lists/genders/GenderRead.vue'
 
 export default {
     name: 'Gender-read-controller',

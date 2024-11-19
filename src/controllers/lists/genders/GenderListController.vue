@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import genderList from 'src/views/lists/gender-s/GenderList.vue'
+import genderList from 'src/views/lists/genders/GenderList.vue'
 
 export default {
     name: 'Gender-list-controller',

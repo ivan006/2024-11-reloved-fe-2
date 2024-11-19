@@ -45,7 +45,7 @@ export default {
     methods: {
         openRecord(pVal, item, router) {
             router.push({
-                name: '/lists/gender-s/:rId/:rName',
+                name: '/lists/genders/:rId/:rName',
                 params: {
                     rId: pVal,
                     rName: pVal,

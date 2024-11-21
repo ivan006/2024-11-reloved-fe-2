@@ -64,7 +64,7 @@ export default class Product extends MyBaseModel {
             'description': this.attr('').nullable(),
             'price': this.attr(''),
             'image': this.attr('').nullable(),
-            'purchase_date': this.attr(''),
+            'purchase_date': this.attr('').nullable(),
             'created_at': this.attr('').nullable(),
             'updated_at': this.attr('').nullable(),
             'brand_id': this.attr(''),

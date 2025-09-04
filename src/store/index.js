@@ -13,7 +13,8 @@ import Product from "src/models/orm-api/Product";
 
 
 // Initialize the database
-const database = new VuexORM.Database()
+import { Database } from '@vuex-orm/core'
+const database = new Database()
 
 // Register models
 database.register(DBCrudCacheSet);
